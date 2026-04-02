@@ -1,15 +1,15 @@
 import os
 import requests
 
-# GitHub Secretsから環境変数を取得
+
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY")
 
-# 取得したい都市名（例: Tokyo, Osaka, Sapporo）
+
 CITY = "Tokyo"
 
 def get_weather():
-    # OpenWeatherMapのAPIエンドポイント
+   
     url = f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={WEATHER_API_KEY}&units=metric&lang=ja"
     
     response = requests.get(url)
